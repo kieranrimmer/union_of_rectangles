@@ -8,19 +8,11 @@ def read_rectangles_from_text_file(filename):
 
 def main():
 
-    frame_1_filename = 'frames_1.txt' 
-    rectangle_list_1 = read_rectangles_from_text_file(frame_1_filename)
+    frame_filename = raw_input("Which data file do you want to use? ")
+    rectangle_list_1 = read_rectangles_from_text_file(frame_filename)
 
-    p_1 = perimeter_of_union_of_rectangles(rectangle_list_1)
-    print "Perimeter of union for file '{}': {}".format(frame_1_filename, p_1)
-
-
-    frame_2_filename = 'frames_2.txt' 
-
-    rectangle_list_2 = read_rectangles_from_text_file(frame_2_filename)
-
-    p_2 = perimeter_of_union_of_rectangles(rectangle_list_2)
-    print "Perimeter of union for file '{}': {}".format(frame_2_filename, p_2)
+    perimeter = perimeter_of_union_of_rectangles(rectangle_list_1)
+    print "The perimeter is: {}".format(perimeter)
 
 
 
